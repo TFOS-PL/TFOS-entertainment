@@ -1,0 +1,193 @@
+/* Reset stylów */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0078d7; /* Domyślny kolor tła jak w systemach Windows */
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Pulpit */
+#desktop {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Pasek zadań */
+#taskbar {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+#start-button {
+  background-color: #0078d7;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#start-button:hover {
+  background-color: #005a9e;
+}
+
+#clock {
+  font-size: 14px;
+}
+
+/* Menu Start */
+#start-menu {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#start-menu.hidden {
+  display: none;
+}
+
+#start-menu h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#start-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#start-menu ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0;
+  background-color: #3d3d3d;
+}
+
+#start-menu ul li:hover {
+  background-color: #575757;
+}
+
+/* Ikony na pulpicie */
+#icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.icon {
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+}
+
+.icon p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Okna aplikacji */
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  height: 300px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.window.hidden {
+  display: none;
+}
+
+.window-header {
+  background-color: #0078d7;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.window-header button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.window-header button:hover {
+  color: #cccccc;
+}
+
+.window-content {
+  flex-grow: 1;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Tryb nocny */
+body.night-mode {
+  background-color: #2d2d2d;
+}
+
+body.night-mode #taskbar {
+  background-color: #1a1a1a;
+}
+
+body.night-mode #start-menu {
+  background-color: #1a1a1a;
+}
+
+body.night-mode .icon p {
+  color: #cccccc;
+}
+
+body.night-mode .window {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.night-mode .window-header {
+  background-color: #555555;
+}
